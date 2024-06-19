@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA nas Eleições</title>
+    
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: #ce3723;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background: #333;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            background: #000000;;
+        }
+
+        .container {
+            flex: 1;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px 10px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #ce3723;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background:#ce3723;
+            color: #ffffff;
+        }
+    
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .section-content div {
+            flex: 1;
+            min-width: 280px;
+        }
+        footer a{
+            color:#e2d7d7;
+        }
+        /* Estilos do dropdown */
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  .dropdown {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20%;
+    height: 40%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  
+  .dropdown-content {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  .dropdown-content a {
+    color: white;
+    display: block;
+    margin: 15px 0;
+    text-decoration: none;
+    font-style: oblique;
+    font-size: 18px;
+    position: relative; /* Adiciona posição relativa para os links */
+  }
+  
+  .dropdown-content a:hover::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    font-size: 45px;
+    cursor: pointer;
+  }
+  
+  /* Estilos do botão de abertura com três traços um abaixo do outro */
+  .open-button {
+    background-color: #ce3723;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+  }
+  
+  .open-button span {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    margin: 4px 0;
+    display: inline-block;
+  }
+  
+  /* Adicione estilos de acordo com suas preferências 
+     menu*/
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #menu {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    inline-size: none;
+    margin-left: 73%;
+  }
+  
+  #menu-icon {
+    margin-right: auto;
+  }
+  
+  #menu-links {
+    display: flex;
+  }
+  
+  .menu-link {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+  }
+  
+    </style>
+</head>
+<!-- parte css do menu-->
+<body>
+    <header>
+        <button class="open-button" onclick="toggleDropdown()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <!-- Dropdown -->
+          <div class="dropdown" id="myDropdown">
+            <div class="dropdown-content">
+              <span class="close-btn" onclick="toggleDropdown()">&times;</span>
+              <h4>Cursos</h4>
+              <a href="" target="_blank" >IA na Educação</a>
+              <a href="" target="_blank">IA nas Eleições</a>
+              <a href="" target="_blank">IA na Saúde</a>
+              <!-- Adicione mais links conforme necessário -->
+            </div>
+          </div>
+        <h1>IA nas Eleições
+        </h1>
+    </header>
+    <div class="container">
+        <section id="home">
+            <div class="image-container">
+                <img src="" alt="IA nas Eleições">
+            </div>
+            <p>A IA é utilizada para analisar grandes volumes de dados eleitorais, como resultados de votações, pesquisas de opinião e padrões de comportamento eleitoral. Algoritmos de aprendizado profundo (deep learning) são treinados para identificar tendências e prever resultados de eleições.</p>
+        </section>
+        <section id="beneficios">
+            <h2>Benefícios da IA nas Eleições</h2>
+            <div class="section-content">
+                <div>
+                    <h3>Precisão</h3>
+                    <p>Melhora na acurácia das previsões eleitorais, frequentemente igualando ou superando a performance de analistas políticos humanos.</p>
+                </div>
+                <div>
+                    <h3>Eficiência</h3>
+                    <p>Redução do tempo necessário para análise de dados eleitorais, permitindo previsões mais rápidas e precisas.</p>
+                </div>
+                <div>
+                    <h3>Assistência</h3>
+                    <p>Suporte na formulação de estratégias políticas, ajudando candidatos e equipes a focarem em campanhas mais eficazes e na interpretação de resultados eleitorais.</p>
+                </div>
+            </div>
+        </section>
+        <section id="desafios">
+            <h2>Campanhas Personalizadas e Estratégias Baseadas em IA</h2>
+            <div class="section-content">
+                <div>
+                    <h3>Descrição</h3>
+                    <p>A IA analisa dados demográficos, comportamentais e históricos de eleições para desenvolver campanhas personalizadas. Este campo inclui análise preditiva de preferências eleitorais e adaptação de discursos.</p>
+                </div>
+                <div>
+                    <h3>Eficiência das Campanhas</h3>
+                    <p>Campanhas mais eficazes e direcionadas, pois são adaptadas às características específicas dos eleitores e às dinâmicas locais.</p>
+                </div>
+                <div>
+                    <h3>Prevenção</h3>
+                    <p>Identificação precoce de tendências eleitorais e mudanças no cenário político, permitindo ajustes estratégicos durante a campanha.</p>
+                </div>
+            </div>
+        </section>
+        <section id="futuro">
+            <h2>O Futuro da IA nas Eleições</h2>
+            <div class="image-container">
+                <img src="" alt="Futuro da IA nas Eleições">
+            </div>
+            <p>O futuro da IA nas eleições promete previsões mais precisas, estratégias de campanha personalizadas, suporte contínuo através de assistentes virtuais, descoberta acelerada de padrões eleitorais, monitoramento em tempo real e votações mais seguras e eficientes.</p>
+        </section>
+    </div>
+    <footer>
+        <p>
+            <a href="https://www.instagram.com/projeto_ia2024/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+          </svg></p>
+        </a>
+    </footer>
+    <script>
+        function toggleDropdown() {
+            var dropdown = document.getElementById("myDropdown");
+            dropdown.style.display =
+              dropdown.style.display === "none" || dropdown.style.display === ""
+                ? "flex"
+                : "none";
+          }
+          
+    </script>
+</body>
+</html>

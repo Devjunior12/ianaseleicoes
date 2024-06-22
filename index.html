@@ -105,43 +105,43 @@
             color:#e2d7d7;
         }
         /* Estilos do dropdown */
-body {
-    padding: 0;
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-  .dropdown {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 20%;
-    height: 40%;
-    background-color: rgba(0, 0, 0, 0.7);
+.dropdown {
+    position: fixed;
+    top: 60px; /* Ajuste a posição superior conforme necessário para ficar abaixo do cabeçalho */
+    right: -5px; /* Ajuste a posição à direita conforme necessário */
+    width: 160px; /* Ajuste a largura conforme necessário */
+    background-color: rgba(0, 0, 0, 0.9);
     display: none;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start; /* Alinha o conteúdo no topo */
     z-index: 1;
-  }
-  
-  .dropdown-content {
+    border-radius: 8px; /* Adiciona bordas arredondadas */
+    padding: 10px; /* Adiciona padding extra no topo */
+}
+
+.dropdown-content {
     background-color: #333;
     color: white;
-    padding: 10px;
     border-radius: 4px;
     text-align: center;
-  }
-  
-  .dropdown-content a {
+    width: 100%; /* Ajusta a largura para 100% do dropdown */
+}
+
+.dropdown-content h4 {
+    margin: 0 0 10px; /* Adiciona margem abaixo do título */
+}
+
+.dropdown-content a {
     color: white;
     display: block;
     margin: 15px 0;
     text-decoration: none;
     font-style: oblique;
     font-size: 18px;
-    position: relative; /* Adiciona posição relativa para os links */
-  }
-  
-  .dropdown-content a:hover::after {
+}
+
+.dropdown-content a:hover::after {
     content: "";
     display: block;
     width: 100%;
@@ -149,20 +149,11 @@ body {
     background-color: white;
     position: absolute;
     bottom: 0;
-  }
-  
-  .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: white;
-    font-size: 45px;
-    cursor: pointer;
-  }
-  
-  /* Estilos do botão de abertura com três traços um abaixo do outro */
-  .open-button {
-    background-color: #ce3723;
+}
+
+/* Estilos do botão de abertura */
+.open-button {
+    background-color: #000000;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -171,55 +162,68 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: fixed;
-    position: absolute;
-    top: 1px;
-    right: 1px;
-  }
-  
-  .open-button span {
+  position:absolute;
+    top: 16px;
+    right: 5px;
+    z-index: 2;
+}
+
+.open-button span {
     width: 30px;
     height: 4px;
     background-color: white;
     margin: 4px 0;
     display: inline-block;
-  }
-  
-  /* Adicione estilos de acordo com suas preferências 
-     menu*/
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  #menu {
-    display: flex;
     align-items: center;
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    inline-size: none;
-    margin-left: 73%;
-  }
-  
-  #menu-icon {
-    margin-right: auto;
-  }
-  
-  #menu-links {
-    display: flex;
-  }
-  
-  .menu-link {
-    color: white;
-    text-decoration: none;
-    margin-right: 20px;
-  }
-  
+    position: relative;
+}
+
+/* Estilos do cabeçalho */
+header {
+    background: #000000;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    height: 70px; /* Ajuste a altura conforme necessário */
+    z-index: 3;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .open-button {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+
+    .open-button span {
+        width: 40px;
+        height: 5px;
+        align-items: center;
+    }
+}
     </style>
 </head>
-<!-- parte css do menu-->
 <body>
     <header>
         <button class="open-button" onclick="toggleDropdown()">
